@@ -14,7 +14,8 @@ export class AppComponent {
   }
   people = [];
   title = 'the leaderboard';
-  everyone = {}
+  everyone = {};
+  name = ''
   getStuff(){
     
     
@@ -26,5 +27,5 @@ export class AppComponent {
 
       console.log(this.people)
     });
-  }
+  };
 }

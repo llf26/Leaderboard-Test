@@ -1,27 +1,21 @@
 <div class="main">
   <div style="text-align:center">
-    <h1>
+    <h4>
       Welcome to {{title}}!
-    </h1>
-    <img style="max-width: 25%" class="img-responsive" src="https://hakron.io/img/logo.svg">
+    </h4>
+    <img style="max-width: 500px" class="img-responsive" src="https://hakron.io/img/logo.svg">
   </div>
   <br/>
-  <!-- <h2>Here are some links to help you start: </h2>
-  <ul>
-    <li>
-      <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-    </li>
-    <li>
-      <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-    </li>
-    <li>
-      <h2><a target="_blank" href="https://blog.angular.io//">Angular blog</a></h2>
-    </li>
-  </ul> -->
-  <div class="row justify-content-between">
-      <button type="button" class="btn btn-primary col-md-2" (click)="getStuff()">Update Leaderboard!</button>
-    <input ngModel="" class="col-md-2">
+
+  <div class="row justify-content-center" style="margin-bottom: 10px;">
+      <button type="button" class="btn btn-primary col-md-3" (click)="getStuff()">Update Leaderboard!</button>
   </div>
+  <form class="row form-inline justify-content-center"  style="margin-bottom: -20px;"> 
+    <input ngModel="name" class="col-xs-4 col-sm-3 col-md-2 col-lg-2" placeholder="Zippy Z." style="margin-right: 10px;">
+    <button type="button" class="lButton btn btn-primary col-xs-4 col-sm-3 col-md-2 col-lg-2">Search Rank</button>
+  </form>
+
+  
 
   <br/>
 </div>
