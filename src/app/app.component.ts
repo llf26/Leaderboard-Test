@@ -46,12 +46,16 @@ export class AppComponent {
   nameLookup(content){
     if(this.lookupName)
       {
-      console.log(this.people);
+      var lowercase = this.lookupName.toLowerCase();
+      var uppercaseFirst = this.lookupName[0].toUpperCase() + this.lookupName.slice(1, this.lookupName.length)
+      var allCapital = this.lookupName.toUpperCase();
+      console.log(allCapital)
       
+      console.log(lowercase);
       for(let i = 0; i < this.people.length; i++)
-        {        
-          console.log('Lookup Name: ', this.lookupName);
-          if(this.people[i].name === this.lookupName)
+        {
+          //console.log(this.people[i].name.toUpperCase());
+          if(this.people[i].name === this.lookupName || this.people[i].name.toLowerCase() === this.lookupName || this.people[i].name[0].toUpperCase + this.people[i].name.slice(1, this.people[i].name.length) === this.lookupName || this.people[i].name.toUpperCase() === this.lookupName)
             {
             this.found.push(this.people[i]);      
             }
