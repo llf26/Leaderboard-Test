@@ -57,14 +57,19 @@ export class AppComponent {
             }
             
         }
-        console.log(this.found[0].name);
-        this.modalService.open(content).result.then((result) => {
-          this.closeResult = `Closed with: ${result}`;
-          this.found = [];
-        }, (reason) => {
-          this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-          this.found = [];
-        });
+        if(this.found.length > 0)
+          {
+            //console.log(this.found[0].name);
+            this.modalService.open(content).result.then((result) => {
+              this.closeResult = `Closed with: ${result}`;
+              this.found = [];
+            }, (reason) => {
+              this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+              this.found = [];
+            });
+          }
+          else{alert('We didn\'t find anyone with that name.');}
     }
+    else{alert('Please enter a name');}
   }
 }
