@@ -55,7 +55,7 @@ export class AppComponent {
       for(let i = 0; i < this.people.length; i++)
         {
           //console.log(this.people[i].name.toUpperCase());
-          if(this.people[i].name === this.lookupName || this.people[i].name.toLowerCase() === this.lookupName || this.people[i].name[0].toUpperCase + this.people[i].name.slice(1, this.people[i].name.length) === this.lookupName || this.people[i].name.toUpperCase() === this.lookupName)
+          if(this.people[i].name === this.lookupName || this.people[i].name.toLowerCase() === this.lookupName || this.people[i].name[0].toUpperCase() + this.people[i].name.slice(1, this.people[i].name.length) === this.lookupName || this.people[i].name.toUpperCase() === this.lookupName)
             {
             this.found.push(this.people[i]);      
             }
