@@ -23,12 +23,12 @@
         </button>
       </div>
       <div class="modal-body">
-          <div class="table-responsive">
+          <div class="table table-responsive">
               <table class="table-bordered table-striped ">
                   <tr>
-                    <td class="col-lg-1 col-md-3 col-sm-3 col-xs-6">Rank</td>
-                    <th class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Name</th>
-                    <th class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Bits</th>
+                    <td class="active col-lg-1 col-md-3 col-sm-3 col-xs-6">Rank</td>
+                    <th class="active col-lg-3 col-md-3 col-sm-3 col-xs-6">Name</th>
+                    <th class="active col-lg-3 col-md-3 col-sm-3 col-xs-6">Bits</th>
                   </tr>
                   <tr *ngFor="let person of found">
                     <td class="col-lg-1 col-md-3 col-sm-3 col-xs-6">{{person.rank}}</td>
@@ -46,7 +46,7 @@
   <br/>
 </div>
 
-  <div class="table-responsive">
+  <div class="table table-responsive">
     <table class="table-bordered table-striped ">
         <tr>
           <td class="col-lg-1 col-md-3 col-sm-3 col-xs-6">Rank</td>
