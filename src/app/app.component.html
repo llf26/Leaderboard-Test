@@ -7,10 +7,10 @@
   </div>
   <br/>
 
-  <div class="row justify-content-center" style="margin-bottom: 10px;">
+  <form class="form-inline justify-content-center" style="margin-bottom: 10px;">
       <button type="button" class="btn btn-primary col-md-3" (click)="getStuff()">Update Leaderboard!</button>
-  </div>
-  <form class="row form-inline justify-content-center"  style="margin-bottom: -20px;"> 
+  </form>
+  <form class="form-inline justify-content-center"  style="margin-bottom: -20px;"> 
     <input [(ngModel)]="lookupName"  [ngModelOptions]="{standalone: true}" class="col-xs-4 col-sm-3 col-md-2 col-lg-2" placeholder="Enter your first name here" style="margin-right: 10px;">
     <button type="button" class="lButton btn btn-primary col-xs-4 col-sm-3 col-md-2 col-lg-2"(click)="nameLookup(content)">Search Rank</button>
   </form>
