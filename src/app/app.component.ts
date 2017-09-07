@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import {Observable} from 'rxjs'; 
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,13 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  ngOnInit(){this.getStuff()}
+  ngOnInit()
+  {
+    this.getStuff();
+
+    var timer = Observable.interval(10000);
+    timer.subscribe(auto => this.getStuff());
+  }
   
   constructor(private http: HttpClient, private modalService: NgbModal){
   }
@@ -38,7 +45,7 @@ export class AppComponent {
   getStuff(){        
     this.http.get('https://hakron.io/arcade/api/users/bits').subscribe(data => {
     
-      
+      //console.log('got stuff')
       //TODO: Live update leaderboard and get rid of button!
       //  console.log(data);
       var result = JSON.stringify(data);
@@ -83,5 +90,4 @@ export class AppComponent {
     }
     else{alert('Please enter a name');}
   }
-
 }
