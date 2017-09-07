@@ -3,3 +3,16 @@
 button{background-color: #246596;}
 *{font-family: 'Open Sans', sans-serif;}
 /* .table td{text-align: center;} */
+
+::-webkit-input-placeholder {
+    text-align: center;
+}
+:-moz-placeholder {
+    text-align: center;
+}
+::-moz-placeholder {
+    text-align: center;
+}
+:-ms-input-placeholder {
+    text-align: center;
+}
