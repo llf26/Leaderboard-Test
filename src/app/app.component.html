@@ -11,7 +11,7 @@
       <button type="button" class="btn btn-primary col-md-3" (click)="getStuff()">Update Leaderboard!</button>
   </form>
   <form class="form-inline justify-content-center"  style="margin-bottom: -20px;"> 
-    <input [(ngModel)]="lookupName"  [ngModelOptions]="{standalone: true}" class="col-xs-4 col-sm-3 col-md-2 col-lg-2" placeholder="Enter your first name here" style="margin-right: 10px;">
+    <input [(ngModel)]="lookupName"  [ngModelOptions]="{standalone: true}" class="col-xs-4 col-sm-3 col-md-2 col-lg-2" placeholder="First Name" style="margin-right: 10px;">
     <button type="button" class="lButton btn btn-primary col-xs-4 col-sm-3 col-md-2 col-lg-2"(click)="nameLookup(content)">Search Rank</button>
   </form>
 
@@ -24,16 +24,16 @@
       </div>
       <div class="modal-body">
           <div class="table table-responsive">
-              <table class="table-bordered table-striped ">
+              <table class="table-bordered table-striped" style="width: 100%">
                   <tr>
-                    <td class="active col-lg-1 col-md-3 col-sm-3 col-xs-6">Rank</td>
-                    <th class="active col-lg-3 col-md-3 col-sm-3 col-xs-6">Name</th>
-                    <th class="active col-lg-3 col-md-3 col-sm-3 col-xs-6">Bits</th>
+                    <td class="">Rank</td>
+                    <th class="">Name</th>
+                    <th class="">Bits</th>
                   </tr>
                   <tr *ngFor="let person of found">
-                    <td class="col-lg-1 col-md-3 col-sm-3 col-xs-6">{{person.rank}}</td>
-                    <td class="col-lg-3 col-md-3 col-sm-3 col-xs-6">{{person.name}}</td>
-                    <td class="col-lg-3 col-md-3 col-sm-3 col-xs-3">{{person.bits}}</td>
+                    <td class="">{{person.rank}}</td>
+                    <td class="">{{person.name}}</td>
+                    <td class="">{{person.bits}}</td>
                   </tr> 
               </table>
             </div>
@@ -47,16 +47,16 @@
 </div>
 
   <div class="table table-responsive">
-    <table class="table-bordered table-striped ">
+    <table class="table-bordered table-striped" style="width: 100%">
         <tr>
-          <td class="col-lg-1 col-md-3 col-sm-3 col-xs-6">Rank</td>
-          <th class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Name</th>
-          <th class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Bits</th>
+          <td class="">Rank</td>
+          <th class="">Name</th>
+          <th class="">Bits</th>
         </tr>
         <tr *ngFor="let person of people">
-          <td class="col-lg-1 col-md-3 col-sm-3 col-xs-6">{{person.rank}}</td>
-          <td class="col-lg-3 col-md-3 col-sm-3 col-xs-6">{{person.name}}</td>
-          <td class="col-lg-3 col-md-3 col-sm-3 col-xs-3">{{person.bits}}</td>
+          <td class="">{{person.rank}}</td>
+          <td class="">{{person.name}}</td>
+          <td class="">{{person.bits}}</td>
         </tr> 
     </table>
   </div>

@@ -36,11 +36,18 @@ export class AppComponent {
   //everyone = {};
   lookupName = '';
   getStuff(){        
-    this.http.get('http://hakron.io/arcade/api/nfc').subscribe(data => {
+    this.http.get('https://hakron.io/arcade/api/users/bits').subscribe(data => {
     
+      
+      //TODO: Live update leaderboard and get rid of button!
       //  console.log(data);
       var result = JSON.stringify(data);
       this.people = JSON.parse(result);
+
+      for (let index in this.people) {
+      this.people[index].rank = (parseInt(index) + 1);
+      }
+
     });
   };
   nameLookup(content){
@@ -76,4 +83,5 @@ export class AppComponent {
     }
     else{alert('Please enter a name');}
   }
+
 }
