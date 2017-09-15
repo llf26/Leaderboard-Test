@@ -14,7 +14,7 @@ export class AppComponent {
   {
     this.getStuff();
 
-    var timer = Observable.interval(10000);
+    var timer = Observable.interval(30000);
     timer.subscribe(auto => this.getStuff());
   }
   

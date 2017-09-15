@@ -34,3 +34,10 @@ h2
     -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: #4a3223;
 }
+
+img
+{
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+
